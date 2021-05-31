@@ -10,7 +10,7 @@ import time
 def doit(notify):
 
     today = (date.today()).strftime("%d-%m-%Y")
-    districtID = "670"
+    districtID = "670" #choose your district id
     baseUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict"
     distId = "?district_id=" + districtID
     dateId = "&date=" + today
@@ -51,12 +51,13 @@ def doit(notify):
 
 if __name__ == '__main__':
     i=0
-    notify = Notify(endpoint="https://notify.run/ZeIkzzFO7ul6Wwr3")
+    notify = Notify(endpoint="https://notify.run/AbcdeFgh1234") #sample url, generate your own url on notify.run
     notify.send("from heroku")
     for i in range(0,12):
         print(i)
         doit(notify)
         time.sleep(60*10)
+
 
 
 
